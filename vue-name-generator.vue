@@ -14,6 +14,12 @@
 <script>
 import tagPlusIcon from 'mdi-vue/TagPlus' // works without an extension too
 export default {
+    data(){
+        return {
+            name:"",
+            parts:[]
+        }
+    },
     props:{
         color:{
             type:String,
@@ -33,20 +39,13 @@ export default {
                 return["./assets/adjectives","./assets/names"]
             }
         },
-        parts:{
-            type:Array,
-            default: function(){
-                return [];
-            }
+        noSpace:{
+            type:Boolean,
+            default:true
         },
         separator:{
             type:String,
             default:"-"
-        }
-    },
-    data(){
-        return{
-            name:""
         }
     },
     computed: {
@@ -66,7 +65,7 @@ export default {
                 if(file!=="0")
                     this.name+=this.separator;
                 var randomLine=Math.floor(Math.random() * Math.floor(this.parts[file].length));
-                this.name+=this.parts[file][randomLine].toLowerCase().trim();
+                this.name+=this.returnName(this.parts[file][randomLine]);
             }
             console.log({name:this.name});
             this.$emit("input",this.name);
@@ -81,6 +80,9 @@ export default {
                     this.parts[key].push(lines[lineNumber]);
             }
             console.log({parts:this.parts});
+        },
+        returnName(line){
+            return (this.noSpace)?line.toLowerCase().trim().replace(/\s/g, ''):this.parts[file][randomLine].toLowerCase().trim();           
         }
     }
 }

@@ -1,8 +1,7 @@
 <template>
     <div>
-        {{nameGenerated}}
-        <vue-name-generator v-model="nameGenerated">
-        </vue-name-generator>
+        <input type="text" :value="nameGenerated"/>
+        <vue-name-generator v-model="nameGenerated" color="grey" width="15px" height="15px" :files='["./assets/adjectives","./assets/names"]' noSpace separator="-"/>
     </div>
 </template>
 
