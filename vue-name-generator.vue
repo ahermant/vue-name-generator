@@ -1,7 +1,11 @@
 <template>
-  <i class="nameGenIcon" :style="iconColor" @click="generateName()"
-    ><tag-plus-icon :width="width" :height="height"
-  /></i>
+  <span
+    class="nameGenIcon mdi mdi-tag-plus"
+    :style="iconColor"
+    @click="generateName()"
+    :width="width"
+    :height="height"
+  ></span>
 </template>
 
 <style lang="scss" scoped>
@@ -10,14 +14,14 @@
     color: gray;
     top: 0.2em;
     position: relative;
-    ::before{
+    span::before{
       display:none;
     }
 }
 </style>
 
 <script>
-import tagPlusIcon from "mdi-vue/TagPlus"; // works without an extension too
+import "@mdi/font/css/materialdesignicons.css";
 export default {
   data() {
     return {
@@ -62,7 +66,6 @@ export default {
       return "color: " + this.color;
     }
   },
-  components: { tagPlusIcon },
   mounted() {
     this.loadFiles();
   },
