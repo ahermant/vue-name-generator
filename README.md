@@ -5,7 +5,7 @@ Generates a random name from several list of names provided by the user
 ## Play the demo
 To see the demo version:
 * Clone the repository
-* Install NPM 
+* Install NPM
 * Launch the command npm install
 * Launch npm run dev
 
@@ -17,7 +17,7 @@ To see the demo version:
 <template>
     <div>
         <input type="text" :value="nameGenerated"/>
-        <vue-name-generator v-model="nameGenerated" color="grey" width="15px" height="15px" :files='["./assets/adjectives","./assets/names"]' noSpace separator="-"/>
+        <vue-name-generator v-model="nameGenerated" color="grey" width="15px" height="15px" :files='["./assets/adjectives","./assets/names"]' noSpace separator="-" maxLength="50"/>
     </div>
 </template>
 
@@ -42,6 +42,7 @@ export default{
 * width: string - (default: 15px) width of the icon
 * height: string - (default:15px) height of the icon
 * files: array - (default: ["./assets/adjectives","./assets/names"]) inputs to generate the name. Each entry provides the relative path to the file. The order define the order in which the parts will be used for names generation. Eg: ```["./assets/adjectives","./assets/names"]```
+* maxLength: number - (default: 30) maxLength of the string generated
 * noSpace: boolean - (default: true) when true, remove all the spaces from the inputs
 * separator: string - (default: -) separate the entry of each of the input files
 

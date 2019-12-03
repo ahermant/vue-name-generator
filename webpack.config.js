@@ -21,13 +21,22 @@ module.exports = {
     }, {
       test: /.vue$/,
       loader: "vue-loader"
-    }, {
+    },
+    {
+      test: /\.s[a|c]ss$/,
+      use: [
+        'vue-style-loader',
+        'css-loader',
+        'sass-loader'
+      ]
+    },
+    {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
       loader: 'url-loader',
-        query: {
-          limit: 10000,
-          name: 'img/[name].[hash:7].[ext]'
-        }
+      query: {
+        limit: 10000,
+        name: 'img/[name].[hash:7].[ext]'
+      }
     }]
   },
 
@@ -37,12 +46,12 @@ module.exports = {
       template: 'example/index.html'
     }),
 
-      new VueLoaderPlugin()
+    new VueLoaderPlugin()
   ],
 
   devServer: {
     contentBase: path.join(__dirname),
-    port: 8080,
+    port: 9090,
     open: true,
     inline: true
   }
