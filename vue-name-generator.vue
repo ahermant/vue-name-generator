@@ -9,7 +9,7 @@
   ></span>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .nameGenIcon{
     cursor: pointer;
     color: gray;
@@ -54,7 +54,7 @@ export default {
       }
     },
     maxLength: {
-      type: Number,
+      type: [Number, String],
       default: 30
     },
     noSpace: {
