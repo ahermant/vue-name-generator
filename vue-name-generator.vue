@@ -1,10 +1,11 @@
 <template>
   <span
-    class="nameGenIcon mdi mdi-tag-plus"
+    :class="CSSStyles"
     :style="iconColor"
     @click="generateName()"
     :width="width"
     :height="height"
+    :title="title"
   ></span>
 </template>
 
@@ -34,6 +35,10 @@ export default {
       type: String,
       default: "gray"
     },
+    icon: {
+      type: String,
+      default: "mdi-tag-plus"
+    },
     width: {
       type: String,
       default: "15px"
@@ -59,9 +64,16 @@ export default {
     separator: {
       type: String,
       default: "-"
+    },
+    title: {
+      type: String,
+      default: "Click to generate a new name"
     }
   },
   computed: {
+    CSSStyles() {
+      return `nameGenIcon mdi ${this.icon}`;
+    },
     iconColor() {
       return "color: " + this.color;
     }

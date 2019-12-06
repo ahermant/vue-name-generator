@@ -17,7 +17,7 @@ To see the demo version:
 <template>
     <div>
         <input type="text" :value="nameGenerated"/>
-        <vue-name-generator v-model="nameGenerated" color="grey" width="15px" height="15px" :files='["./assets/adjectives","./assets/names"]' noSpace separator="-" maxLength="50"/>
+        <vue-name-generator v-model="nameGenerated" color="grey" width="15px" height="15px" :files='["./assets/adjectives","./assets/names"]' noSpace separator="-" maxLength="50" icon="mdi-autorenew" title="My title"/>
     </div>
 </template>
 
@@ -45,6 +45,8 @@ export default{
 * maxLength: number - (default: 30) maxLength of the string generated
 * noSpace: boolean - (default: true) when true, remove all the spaces from the inputs
 * separator: string - (default: -) separate the entry of each of the input files
+* icon: string - (default: mdi-tag-plus) define the icon used for the generator
+* title: string - (default: Clic to generate a new name) define the title of the span
 
 ###### Contributing
 
@@ -62,4 +64,5 @@ This project is licensed under the BSD3 License - see the [LICENSE.md](LICENSE.m
 
 ## Acknowledgments
 
+* Inspired by [golang-petname] (https://github.com/szaharici/golang-petname/) for the idea
 * Insipred by [vue-json-editor](https://github.com/dirkliu/vue-json-editor) for the component structure

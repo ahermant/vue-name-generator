@@ -10,6 +10,7 @@
       noSpace
       maxLength="50"
       separator="-"
+      icon="mdi-autorenew"
     />
   </div>
 </template>
