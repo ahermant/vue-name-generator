@@ -50,7 +50,7 @@ export default {
     files: {
       type: Array,
       default: function() {
-        return ["../assets/adjectives", "../assets/names"];
+        return ["./assets/adjectives", "./assets/names"];
       }
     },
     maxLength: {
