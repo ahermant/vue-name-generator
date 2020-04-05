@@ -9,6 +9,7 @@ module.exports = {
             targets: [
                 { src: 'src/assets', dest: 'dist' }
             ]
-        }
+        },
+        "@rollup/plugin-url": true
     }
 };
