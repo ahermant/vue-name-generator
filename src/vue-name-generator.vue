@@ -22,7 +22,7 @@
 </style>
 
 <script>
-import "@mdi/font/css/materialdesignicons.css";
+require("@mdi/font/css/materialdesignicons.css");
 export default {
   data() {
     return {
