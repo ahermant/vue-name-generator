@@ -10,14 +10,14 @@
 </template>
 
 <style lang="scss">
-.nameGenIcon{
-    cursor: pointer;
-    color: gray;
-    top: 0.2em;
-    position: relative;
-    span::before{
-      display:none;
-    }
+.nameGenIcon {
+  cursor: pointer;
+  color: gray;
+  top: 0.2em;
+  position: relative;
+  span::before {
+    display: none;
+  }
 }
 </style>
 
@@ -50,7 +50,7 @@ export default {
     files: {
       type: Array,
       default: function() {
-        return ["./assets/adjectives", "./assets/names"];
+        return ["../assets/adjectives", "../assets/names"];
       }
     },
     maxLength: {
