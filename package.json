@@ -1,6 +1,6 @@
 {
   "name": "vue-name-generator",
-  "version": "2.0.5",
+  "version": "2.0.4",
   "description": "Name generator for Vue.js",
   "main": "./dist/index.js",
   "scripts": {
@@ -46,7 +46,6 @@
     "node-sass": "^4.13.1",
     "rimraf": "^2.6.1",
     "rollup-plugin-copy": "^3.3.0",
-    "rollup-plugin-rebase": "^3.3.3",
     "rollup-plugin-vue": "^5.1.6",
     "sass-loader": "^8.0.0",
     "style-loader": "^0.23.1",
