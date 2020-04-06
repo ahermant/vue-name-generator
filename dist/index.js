@@ -1,3 +1,8 @@
+/*!
+ * vue-name-generator v2.0.3
+ * (c) ahermant
+ * Released under the ISC License.
+ */
 'use strict';
 
 //
@@ -196,7 +201,7 @@ var script = {
     files: {
       type: Array,
       "default": function _default() {
-        return ["./assets/adjectives", "./assets/names"];
+        return ["../assets/adjectives", "../assets/names"];
       }
     },
     maxLength: {
@@ -433,7 +438,7 @@ var __vue_staticRenderFns__ = [];
 
 var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-861fd42e_0", {
+  inject("data-v-bb50da22_0", {
     source: ".nameGenIcon{cursor:pointer;color:gray;top:.2em;position:relative}.nameGenIcon span::before{display:none}",
     map: undefined,
     media: undefined

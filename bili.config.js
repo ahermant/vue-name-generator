@@ -1,14 +1,19 @@
 
 module.exports = {
+    banner: true,
+    output: {
+        extractCSS: false,
+    },
     plugins: {
         vue: {
             css: true,
-            postcss: true
-        },
-        copy: {
-            targets: [
-                { src: 'src/assets', dest: 'dist' }
-            ]
+            postcss: true,
+            "copy-assets": {
+                assets: [
+                    // You can include directories
+                    "src/assets"
+                ],
+            }
         }
     }
 };
