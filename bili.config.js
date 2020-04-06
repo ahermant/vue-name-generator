@@ -6,14 +6,7 @@ module.exports = {
     },
     plugins: {
         vue: {
-            css: true,
-            postcss: true,
-            "copy-assets": {
-                assets: [
-                    // You can include directories
-                    "src/assets"
-                ],
-            }
+            css: true
         }
     }
 };

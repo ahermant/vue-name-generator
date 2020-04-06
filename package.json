@@ -1,6 +1,6 @@
 {
   "name": "vue-name-generator",
-  "version": "2.0.3",
+  "version": "2.0.2",
   "description": "Name generator for Vue.js",
   "main": "./dist/index.js",
   "scripts": {
