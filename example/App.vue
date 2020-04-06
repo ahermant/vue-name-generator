@@ -8,7 +8,7 @@
       height="15px"
       :files="['./assets/adjectives', './assets/names']"
       noSpace
-      maxlength="50"
+      maxLength="50"
       separator="-"
       icon="mdi-autorenew"
     />
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import vueNameGenerator from "../src/vue-name-generator.vue";
+import vueNameGenerator from "../vue-name-generator.vue";
 export default {
   data() {
     return {
